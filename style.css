@@ -1,0 +1,136 @@
+* {
+  /* min-height: 100vh; */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-size: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+:root {
+  /* primary color */
+  --bright-orange: hsl(31, 77%, 52%);
+  --dark-cyan: hsl(184, 100%, 22%);
+  --very-dark-cyan: hsl(179, 100%, 13%);
+
+  /* Neutral-color */
+
+  /* paragraphs */
+  --transparent-white: hsla(0, 0%, 100%, 0.75);
+  /* background, headings, buttons */
+  --very-light-gray: hsl(0, 0%, 95%);
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  min-width: 30%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: start;
+  justify-content: center;
+  padding: 2.5em;
+  height: 500px;
+  flex-grow: 20px;
+}
+
+.sedan {
+  background-color: var(--bright-orange);
+  padding: 20px;
+  border-radius: 8px 0px 0px 8px;
+}
+.suv {
+  background-color: var(--dark-cyan);
+  padding: 20px;
+}
+.luxury {
+  background-color: var(--very-dark-cyan);
+  padding: 20px;
+  border-radius: 0px 8px 8px 0px;
+}
+h1 {
+  color: var(--very-light-gray);
+  font-size: 30px;
+  font-family: "Big Shoulders Display", sans-serif;
+  /* padding-bottom: 50px;
+  padding-left: 18px; */
+  text-transform: uppercase;
+}
+
+img {
+  padding-top: 0.38em;
+}
+
+p {
+  font-family: "Lexend Deca", sans-serif;
+  /* text-align: center; */
+  padding-bottom: 3em;
+  padding-top: 2em;
+  /* margin: 0 auto; */
+  line-height: 1.5;
+  color: var(--transparent-white);
+  font-size: small;
+  width: 200px;
+  font-size: 16px;
+  
+}
+
+.sedan a {
+  color: var(--bright-orange);
+}
+.suv a {
+  color: var(--dark-cyan);
+}
+.luxury a {
+  color: var(--very-dark-cyan);
+}
+
+a {
+  text-decoration: none;
+  padding: 10px 25px;
+  border-radius: 50px;
+  margin-bottom: 10px;
+  background-color: var(--very-light-gray);
+  border: 2px solid transparent;
+}
+
+a:active {
+  background-color: transparent;
+  border-color: var(--transparent-white);
+  color: var(--transparent-white);
+}
+
+article {
+  height: 600px;
+}
+
+@media (max-width: 600px) {
+  .container {
+    flex-direction: column;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+    margin: 175px 0px;
+  }
+  .sedan {
+    border-radius: 8px 8px 0px 0px;
+  }
+  .luxury {
+    border-radius: 0px 0px 8px 8px;
+  }
+
+  p{
+    font-size: smaller;
+  }
+  article{
+  height: 300px;
+  
+  }
+}
